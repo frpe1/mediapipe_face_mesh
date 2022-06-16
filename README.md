@@ -2,6 +2,13 @@
 
 Enkel setup för Tensorflow och MediaPipe och REACT
 
+# Demo
+
+Demo
+```
+https://utopiafx.se/reactapps/7/
+```
+
 # Så här kör man
 ```
 > npm install
