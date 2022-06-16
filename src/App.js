@@ -1,8 +1,13 @@
 import { FaceMesh } from "@mediapipe/face_mesh";
 import React, { useRef, useEffect } from "react";
+import { BsCamera } from "react-icons/bs"; // Används för att kunna accessa icons
+
 import * as Facemesh from "@mediapipe/face_mesh";
 import * as cam from "@mediapipe/camera_utils";
 import Webcam from "react-webcam";
+
+import './App.css';
+
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -89,39 +94,22 @@ function App() {
     }
   }, []);
   return (
-    <center>
+    
       <div className="App">
-        <Webcam
-          ref={webcamRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />{" "}
-        <canvas
-          ref={canvasRef}
-          className="output_canvas"
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        ></canvas>
+        <h1 className='title'>Provrum</h1>
+        <BsCamera />
+
+        <div className="ar-container">
+          <Webcam
+            ref={webcamRef}
+            className='webcam'
+          />{" "}
+          <canvas
+            ref={canvasRef}
+            className="output_canvas"          
+          ></canvas>
+        </div>
       </div>
-    </center>
   );
 }
 
