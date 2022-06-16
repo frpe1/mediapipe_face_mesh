@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@mediapipe/camera_utils": "^0.3.1620247984",
     "@mediapipe/face_mesh": "^0.4.1629159166",
